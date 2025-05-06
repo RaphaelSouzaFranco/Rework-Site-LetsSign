@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro - LetsSign</title>
+  <link rel="stylesheet" href="css/Cadastro.css" />
+</head>
+
+<body class="cadastro">
+  <div class="container">
+    <a href="COLOCAR PAGINA"class="botao-voltar">Voltar</a>
+    <div class="form-box">
+      <img src="images/LogoBranco.svg" alt="LetsSign" class="logo" />
+      <form>
+        <label>
+          Seu Nome
+          <input type="text" placeholder="Digite seu nome" required />
+        </label>
+
+        <label>
+          CPF/CNPJ
+          <input type="text" required minlength="3" maxlength="16" placeholder="Digite seu CPF/CNPJ" />
+        </label>
+
+        <label>
+          Endereço
+          <input type="text" placeholder="Digite seu endereço completo" required />
+        </label>
+
+        <label>
+          E-mail
+          <input type="email" placeholder="Digite seu e-mail" required />
+        </label>
+
+        <label>
+          Anexo foto documento RG
+          <input type="file" required />
+        </label>
+
+        <label>
+          Telefone
+          <input type="tel" placeholder="Digite seu número" required />
+        </label>
+
+        <label>
+          Senha
+          <input type="password" placeholder="Digite sua senha" required />
+        </label>
+
+        <div class="termos">
+          <input type="checkbox" id="termos" required />
+          <label for="termos">Declaro ter lido e concordado com os <a href="#">Termos de uso</a></label>
+        </div>
+
+        <a href="pagina-confirmacao.html" class="botao">CONTINUAR</a>
+
+      </form>
+    </div>
+  </div>
+</body>
+</html>

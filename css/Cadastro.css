@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #1A2127;
+    color: white;
+  }
+  
+  body.confirmacao .container {
+    background-color: #3a556a;
+  }
+  
+  .form-box {
+    background-color: #12161c;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  }
+  
+  body.confirmacao .form-box {
+    background-color: #ffffff;
+  }
+  
+  .logo {
+    width: 250px;
+    display: block;
+    margin: 0 auto 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="file"],
+  input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 8px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  input:focus {
+    outline: none;
+    border-bottom: 2px solid #00d1ff;
+    background-color: #1e1e1e;
+  }
+  
+  .termos {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    margin: 15px 88;
+  }
+  
+  .termos input {
+    margin-right: 5px;
+  }
+  
+  .termos a {
+    color: #00d1ff;
+    text-decoration: none;
+  }
+
+  .botao-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+      
+  a.botao {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #00d1ff;
+    color: black;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  a.botao:hover {
+    background-color: #00b8e0;
+  }
+  
+
+a.botao:hover {
+  background-color: #00b8e0;
+}
+
+  .botao:hover {
+    background-color: #00b8e0;
+  }
+  
+  .botao-escuro {
+    background-color: #0c1a22;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .botao-escuro:hover {
+    background-color: #0a161d;
+  }
+  
+  .aviso {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    text-align: center;
+    color: #eaeaea;
+  }
+  
+  .voltar {
+    align-self: flex-start;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 600px) {
+    .form-box {
+      padding: 1.5rem;
+    }
+  
+    .logo {
+      width: 100px;
+      margin-bottom: 13px;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"],
+    input[type="tel"] {
+      font-size: 0.95rem;
+    }
+  
+    .botao {
+      padding: 10px;
+      font-size: 0.95rem;
+    }
+  }
+  
