@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LetsSign - Biometria Facial</title>
+    <link rel="stylesheet" href="./css/faceid.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  </head>
+  <body>
+    <header class="header">
+        <div class="logo">
+          <img src="./images/logo_lets.png" 
+          alt="Assinatura eletrônica e digital, gestão e automação de documentos é com a LetsSign"
+           title="Assinatura eletrônica e digital, gestão e automação de documentos é com a LetsSign"/>
+        </div>
+    </header>
+    <main class="container">
+          
+        <div class="content">
+            <nav class="steps">
+                <a href="./faceid.html" class="active">Verificação facial</a>
+                <a href="confirmacao-senha">Confirmação Senha</a>
+                <a href="./DID.html">Emissão do DID</a>
+                <a href="cadastrar-assinatura">Cadastrar assinatura</a>
+            </nav>
+        </div>
+
+          <!-- div da câmera e botão (centro) -->
+        <div class="camera-section">
+            <div class="id_rosto">
+              <div class="face-frame">
+                <div class="scan-feedback"></div>
+              </div>
+            </div>
+            <button class="btn btn-primary">INICIAR VERIFICAÇÃO</button>
+        </div>
+      
+          <!-- div do texto (direita) -->
+        <div class="instructions-section">
+            <h4>Biometria Facial</h4>
+            <p>Para garantir a segurança da sua conta, precisamos verificar sua identidade.</p>
+            <p>Por favor, siga as instruções abaixo:</p>
+            <ul class="instrucoes">
+              <li>Certifique-se de que seu rosto esteja bem iluminado e visível.</li>
+              <li>Evite usar óculos escuros ou chapéus que possam cobrir seu rosto.</li>
+              <li>Olhe diretamente para a câmera e mantenha uma expressão neutra.</li>
+            </ul>
+        </div>
+        
+    </main>
+  </body>
+</html>

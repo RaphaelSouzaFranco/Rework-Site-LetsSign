@@ -1,0 +1,210 @@
+/* Reset CSS */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+
+:root {
+    --primary-color: #25DFFE;
+    --secondary-color: #171E22;
+    --text-color: rgba(37, 223, 254, 0.5);
+    --background-color: #2b2f36;
+  }
+
+* {
+    color: var(--text-color);
+}
+
+body {
+    background-color: #171E22;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    margin: 0;
+    font-size: 16px;
+    height: 100vh;
+    padding: 0;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+  
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+main{
+    display: flex;
+    flex: 1 1 0;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 64px;
+}
+  
+.logo img {
+    max-width: 300px; /* ajuste conforme necessário */
+    height: auto ; /* mantém a proporção da imagem */
+    margin: 0 auto; /* centraliza a imagem */
+}
+  
+.container {
+    
+}
+
+.camera-section {
+    height: 350px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;     /* centraliza verticalmente */
+    margin: auto 0;    /* necessário para o posicionamento absoluto do conteúdo */
+}
+
+.id_rosto, .face-frame {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* ajuste da lista de etapas à esquerda */
+.content {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* espaço entre os itens */
+}
+  
+.steps {
+    position: relative;
+    padding-left: 20px;
+    border-left: 1px solid var(--primary-color);
+}
+
+.steps a {
+    position: relative;
+    display: block;
+    margin-bottom: 50px;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.steps a::before {
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #12181f;
+    border: 3px solid var(--primary-color);
+    transition: background-color 0.3s;
+}
+
+.steps a:hover::before {
+    background-color: var(--primary-color);
+}
+
+.steps a:hover {
+    font-weight: bold;
+    transform: translateX(5px);
+}
+
+.steps a.active::before {
+    background-color: var(--primary-color);
+}
+  
+
+/* informações à direita */
+.container-form {
+    width: 400px; /* largura fixa */
+    margin-left: auto; /* empurra para a direita */
+    margin-right: 50px; /* distancia da borda direita */
+    padding: 20px; 
+}
+
+.face-frame {
+    border: 3px solid var(--primary-color);
+    border-radius: 50%; 
+    overflow: hidden;
+    background-color: rgba(37, 223, 254, 0.1);
+    
+}
+  
+#cameraFeed {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* preenche o quadro sem distorcer */
+    
+}
+  
+.scan-feedback {
+    position: relative;
+    left: 2%;
+    width: 300px;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #25DFFE, transparent);
+    animation: scan 2s linear infinite;
+    
+}
+  
+@keyframes scan {
+    0% { top: 0%; }
+    100% { top: 100%; }
+}
+  
+.btn {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 12px 24px; 
+    font-size: 16px;
+    color: #171E22;
+    cursor: pointer;
+    border-radius: 15px;
+    font-weight: 400;
+    width: 100%;
+    max-width: 250px;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+    
+}    
+
+.btn:hover {
+  background-color: whitesmoke;
+}
+
+.instructions-section {
+    width: 28%;
+    font-size: 14px;
+    color: rgba(37, 223, 254, 0.5); /* 50% de opacidade */
+    text-align: center;
+}
+
+.instrucoes {
+    text-align: start;
+}
+
+@media (max-width: 1024px) {
+    .header{
+        display: flex;
+        justify-content: center;
+    }
+    main {
+        flex-direction: column;
+        padding-block: 50px;
+    }
+    .content {
+        display: none;
+    }
+    .camera-section{
+        width: 250px;
+        height: 250px;
+    }
+    .instructions-section {
+        width: 100%;
+    }
+    .logo img {
+        width: 250px;
+    }
+    .scan-feedback{
+        left: -4%;
+    }
+}
