@@ -1,0 +1,324 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0e1117;
+  color: whitesmoke;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  align-items: center; /* Isso alinha o conteúdo verticalmente */
+}
+
+
+.sidebar {
+  width: 220px;
+  padding: 190px 20px;
+  border-right: 1px solid #2b2f36;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Adicione isso */
+  align-items: center;         /* Centraliza horizontalmente */
+}
+
+.logo {
+  margin-bottom: 40px;         /* Espaço abaixo da logo */
+  align-self: center;          /* Centraliza a logo */
+}
+
+.steps {
+  position: relative;
+  padding-left: 20px;
+  border-left: 1px solid #00C2FF;
+}
+
+.steps a {
+  position: relative;
+  display: block;
+  margin-bottom: 50px;
+  color: #00C2FF;
+  text-decoration: none;
+  transition: 0.1s ease;
+}
+
+.steps a::before {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #12181f;
+  border: 3px solid #00C2FF;
+  transition: background-color 0.1s;
+}
+
+.steps a:hover::before {
+  background-color: #00C2FF;
+}
+
+.steps a:hover {
+  font-weight: bold;
+  transform: translateX(5px);
+}
+
+.steps a.active::before {
+  background-color: #00C2FF;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: #161B22;
+  border: 1px solid #00C2FF;
+  border-radius: 8px;
+  padding: 40px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 95vh;
+
+}
+
+.titulo-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.titulo {
+  display: inline-block;
+  border: 2px solid #00C2FF;
+  color: #00C2FF;
+  background-color: transparent;
+  padding: 8px 150px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+  
+
+.subtitulo {
+  font-size: 15px;
+  color: whitesmoke;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.centro {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.passo h3 {
+    display: inline-block;
+    border: 3px solid #00C2FF;
+    color: #00C2FF;
+    background-color: transparent;
+    padding: 8px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+.passo p {
+  color: whitesmoke;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.assinatura-box {
+  background-color: #161B22;
+  padding: 5px;
+  border-radius: 5px;
+  margin:20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+canvas {
+  background: whitesmoke;
+  border: 1px solid #333;
+  border-radius: 4px;
+    width: 1120px;
+    height: 300px;
+  display: block;
+}
+
+
+.botoes {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.botoes button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botoes {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+}
+
+#limpar, #confirmar {
+  background-color: #00C2FF;
+  color: #161B22;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#confirmar:hover,
+#limpar:hover {
+  background-color: whitesmoke;
+  color: black;
+}
+
+
+.iniciar {
+  width: 80%;
+  padding: 15px;
+  background-color: #00C2FF;
+  color: #000;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  align-items:  center;
+  right: 0px;
+  margin-left: 3cm;
+}
+.iniciar:hover{
+  background-color: whitesmoke;
+  color: black;
+}
+
+.timer-ring {
+  position: relative;
+  width: 160px;
+  height: 160px;
+}
+
+.timer-ring svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.timer-ring circle {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+circle.bg {
+  stroke: #2b2f36;
+}
+
+circle.progress {
+  stroke: whitesmoke;
+  stroke-dasharray: 282.6;       /* comprimento da circunferência */
+  stroke-dashoffset: 0;          /* vai animar a partir daqui */
+  transition: stroke-dashoffset 1s linear;
+}
+
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.timer-text span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.timer-widget {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+}
+
+@media (max-width: 844px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 220px;
+    padding: 40px 20px;
+    border-right: 1px solid #2b2f36;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Adicione isso */
+    align-items: center;         /* Centraliza horizontalmente */
+  }
+
+  .steps {
+    padding-left: 20px;
+    border-left: 1px solid #00C2FF;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+  
+  .logo {
+    align-items: top;
+    margin-top: 200px;
+  }
+  
+    
+  
+  .main {
+    padding: 10px;
+  }
+
+  .timer-widget {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    top: 30px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 430px) {
+  .timer-widget {
+    top: 30px;
+    width: 90%;
+    max-width: 250px;
+  }
+}

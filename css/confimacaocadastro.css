@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #0D1117;
+    color: white;
+  }
+  
+  .quadradomeio {
+    background-color: #161B22;
+    padding: 2.5rem; 
+    border-radius: 12px;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  .logo {
+    width: 250px;
+    display: block;
+    margin: 0 auto 30px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 20px; 
+    font-size: 0.95rem;
+  }
+  
+  input[type="password"] {
+    width: 100%;
+    padding: 12px; 
+    margin-top: 12px; 
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    color: white;
+    font-size: 1rem;
+  }
+  
+  .campo-confirmacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px; 
+  }
+  
+  .campo-confirmacao span {
+    font-size: 1.2rem; 
+    color: white;
+    margin-bottom: 20px; /
+  }
+  
+  .campo-confirmacao input {
+    width: 100%;
+    padding: 14px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid #fff;
+    font-size: 1rem;
+    border-radius: 6px;
+  }
+  
+  .campo-confirmacao input:focus {
+    outline: none;
+    background-color: #161B22;
+  }
+  
+  .botao-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 8px 12px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 6px;
+    transition: background-color 0.1s ease;
+  }
+
+  .botao-voltar:hover {
+   background-color: whitesmoke;
+   color: black
+  }
+
+  a.botao {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #00C2FF;
+    color: black;
+    text-decoration: none;
+    padding: 16px; 
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.1s ease;
+    margin-top: 20px;
+  }
+  
+  a.botao:hover {
+    background-color: whitesmoke;
+  }
+  
+  @media (max-width: 600px) {
+    .quadradomeio {
+      padding: 2rem;
+    }
+  
+    .logo {
+      width: 100px;
+      margin-bottom: 20px;
+    }
+  
+    input[type="password"] {
+      font-size: 1rem;
+    }
+  
+    .botao {
+      padding: 14px;
+      font-size: 1rem;
+    }
+}
+.quadrado-facial {
+    position: fixed;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    padding: 16px 24px;
+    border: 2px solid white;
+    border-radius: 12px;
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    background-color: transparent;
+  }
+  
