@@ -1,15 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LetsSign - Documentos</title>
-    <link rel="stylesheet" href="./css/Documentos.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LetsSign</title>
+    <link rel="stylesheet" href="./css/Base.css" />
+    <link rel="stylesheet" href="./css/Documentos.css" /> 
 </head>
+
 <body>
-    <header>
-        <img src="images/LogoBranco.svg" alt="LetsSign Logo" class="logo" />
-    </header>
-    
+    <header> <img src="images/LogoBranco.svg" alt="LetsSign Logo" class="logo" /> </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="images/Home.png"> Início</a></li>
+                    <li><a href="./Documentos.html" target="_blank"><img src="images/Documentos.png"> Documentos</a></li>
+                    <li><a href="./Historico.html" target="_blank"><img src="images/Histórico.png"> Histórico</a></li>
+                    <li><a href="#"><img src="images/Perfil.png"> Perfil</a></li>
+                    <li><a href="./login.html"><img src="images/Sair.png"> Sair</a></li>
+                </ul>
+            </nav>
+        </aside> 
+        <!-- Área principal de conteúdo -->
+        <div class="content-area"> 
+            <!-- CONTEÚDO DINÂMICO DA PÁGINA -->
+            <main class="main documentos">
+                <h2>Documentos</h2>
+                <div class="cards-wrapper"> 
+                    <!-- Cards com documentos aqui --> 
+                     <!-- Card 1 -->
+                    <div class="card-container">
+                        <div class="card"> <a href="./images/CONTRATO DE TRABALHO.pdf" target="_blank" class="pdf-link">
+                                <div class="thumbnail-container"> <img src="images/Contrato de trabalho img.png"
+                                        alt="Contrato de Trabalho" class="document-thumbnail"> </div>
+                            </a> </div>
+                        <div class="card-info">
+                            <h3>Contrato de Trabalho</h3>
+                            <p class="status finalizado">Status: assinatura finalizada</p>
+                        </div>
+                    </div> 
+                    <!-- Card 2 -->
+                    <div class="card-container">
+                        <div class="card"> <a href="./images/CONTRATO DE LOCAÇÃO RESIDENCIAL.pdf" target="_blank"
+                                class="pdf-link">
+                                <div class="thumbnail-container"> <img src="images/Contrato de locação residencial.png"
+                                        alt="Locação Residencial" class="document-thumbnail"> </div>
+                            </a> </div>
+                        <div class="card-info">
+                            <h3>Contrato de Locação Residencial</h3>
+                            <p class="status expirado">Status: assinatura expirada</p>
+                        </div>
+                    </div> 
+                    <!-- Card 3 -->
+                    <div class="card-container">
+                        <div class="card"> <a href="./images/Contrato de prestação de serviço.pdf" target="_blank"
+                                class="pdf-link">
+                                <div class="thumbnail-container"> <img src="images/Contrato de prestação de serviço.png"
+                                        alt="Prestação de Serviço" class="document-thumbnail"> </div>
+                            </a> </div>
+                        <div class="card-info">
+                            <h3>Contrato de Prestação de Serviço</h3>
+                            <p class="status pendente">Status: assinatura pendente</p>
+                        </div>
+                    </div>
+                </div>
+            </main> 
+            <!-- Temporizador agora está fora da main -->
+            <div class="timer-wrapper">
+                <div class="timer-container">
+                    <div class="timer-ring"> <svg viewBox="0 0 100 100">
+                            <circle class="bg" cx="50" cy="50" r="45"></circle>
+                            <circle class="progress" cx="50" cy="50" r="45"></circle>
+                        </svg>
+                        <div class="timer-text">
+                            <p>Tempo até expirar</p> <span id="timer"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <footer>
+        <p>&copy; 2023 Letssign. Todos os direitos reservados.</p>
+    </footer>
 </body>
+
 </html>

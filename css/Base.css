@@ -1,0 +1,173 @@
+/* === VARIÁVEIS E CONFIGURAÇÕES GERAIS === */
+:root {
+  --bg-color: #171e22;
+  --text-color: #fff;
+  --border-color: #fdfff0b1;
+  --primary-accent: #006978;
+  --success-color: #2e8b57;
+  --error-color: #b33a3a;
+  --pending-color: rgb(177, 177, 177);
+  --table-header-bg: #1E262D;
+  --table-row-hover: #f1f0f0;
+  --status-finalizado:#2e8b57;
+  --status-expirado: #b33a3a;      
+  --status-pendente: #f8c463; 
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 3%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  border: 0.3px solid var(--border-color);
+}
+
+/* === HEADER === */
+header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--bg-color);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 0.3px solid #fdfff0b1;
+  background-color: #171e22;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.3);;
+}
+
+.logo {
+  width: 20%;
+  margin-bottom: 150px;
+  padding: 30px;
+}
+
+/* === LAYOUT PRINCIPAL === */
+.container {
+  display: flex;
+  min-height: calc(100vh - 60px);
+  gap: 20px;
+  position: relative;
+}
+
+/* === SIDEBAR (MENU LATERAL) === */
+.sidebar {
+  width: 200px;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  border-top: 0.5px solid var(--border-color);
+  border-right: 0.5px solid var(--border-color);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.sidebar li {
+  margin-bottom: 5%;
+}
+
+.sidebar a {
+  color: var(--text-color);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar a:hover {
+  opacity: 0.8;
+}
+
+.sidebar a img {
+  width: 30px;
+  height: 30px;
+}
+
+/* === TIMER COMPONENT === */
+.timer-wrapper {
+  position: absolute;
+  right: 20px;
+  top: -200px;
+  z-index: 1000;
+  }
+
+.timer-container {
+  width: 160px;
+  height: 160px;
+}
+
+.timer-ring {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.timer-ring svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.timer-ring circle {
+  fill: none;
+  stroke-width: 8;
+  stroke-linecap: round;
+}
+
+circle.bg {
+  stroke: #2b2f36;
+}
+
+circle.progress {
+  stroke: var(--text-color);
+  stroke-dasharray: 282.6;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 1s linear;
+}
+
+.timer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.timer-text span {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+
+/* === MAIN CONTENT AREA === */
+.content-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

@@ -4,88 +4,92 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>LetsSign</title>
+  <link rel="stylesheet" href="./css/Base.css" />
   <link rel="stylesheet" href="./css/Historico.css" />
 </head>
 
-<!-------------------------------------------------------------------------------------------------------------------->
 <body>
-    <header>
-        <img src="images/LogoBranco.svg" alt="LetsSign Logo" class="logo" />
-    </header>
+  <header> <img src="images/LogoBranco.svg" alt="LetsSign Logo" class="logo" /> </header>
   <div class="container">
-    <!-- Menu lateral -->
     <aside class="sidebar">
       <nav>
         <ul>
-          <li><a href="#"><img src="images/Home.png"> Início</a></li>
-          <li><a href="#"><img src="images/Documentos.png"> Documentos</a></li>
-          <li><a href="#"><img src="images/Histórico.png"> Histórico</a></li>
-          <li><a href="#"><img src="images/Perfil.png"> Perfil</a></li>
-          <li><a href="#"><img src="images/Sair.png"> Sair</a></li>
+          <li><a href="#"><img src="images/Home.png" alt="Início" /> Início</a></li>
+          <li><a href="./Documentos.html"><img src="images/Documentos.png" alt="Documentos" /> Documentos</a></li>
+          <li><a href="./Historico.html"><img src="images/Histórico.png" alt="Histórico" /> Histórico</a></li>
+          <li><a href="#"><img src="images/Perfil.png" alt="Perfil" /> Perfil</a></li>
+          <li><a href="#"><img src="images/Sair.png" alt="Sair" /> Sair</a></li>
         </ul>
       </nav>
-    </aside>
-
-    <!-- Conteúdo principal -->
-    <main class="main">
-        <script src="./timer.js"></script>
-        <div class="timer-container">
-            <div class="timer-ring">
-                <svg viewBox="0 0 100 100">
-                    <circle class="bg" cx="50" cy="50" r="45"></circle>
-                    <circle class="progress" cx="50" cy="50" r="45"></circle>
-                </svg>
-                <div class="timer-text">
-                    <p>Tempo até expirar</p>
-                    <span id="timer"></span>
-                </div>
-            </div>
-        </div>
-        
+    </aside> 
+    <!-- Área principal de conteúdo -->
+    <div class="content-area"> 
+      <!-- CONTEÚDO DINÂMICO DA PÁGINA -->
+      <main class="main historico">
         <div class="table-container">
-      <h2>Histórico de Documentos</h2>
-
-      <table>
-        <thead>
-          <tr>
-            <th>Nome do documento</th>
-            <th>Status</th>
-            <th>Data e hora</th>
-            <th>Chave/Carteira</th>
-            <th>Geolocalização</th>
-            <th>URL de acesso blockchain</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Contrato de trabalho</td>
-            <td>Finalizado</td>
-            <td>02/05/2024 13:44</td>
-            <td>C4b6db1a5a...</td>
-            <td>Avenida Paulista - 1499 - SP</td>
-            <td>4b8ae0d6f7...</td>
-          </tr>
-          
-          <tr>
-            <td>Contrato de locação</td>
-            <td>Pendente</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-          </tr>
-          <tr>
-            <td>Contrato de Prestação de Serviço</td>
-            <td>Expirado</td>
-            <td>24/03/2024 10:13</td>
-            <td>D3ddb105cO...</td>
-            <td>Avenida 23 de Maio - 1105 - SP</td>
-            <td>Cbjr4ee9lomg6...</td>
-          </tr>
-        </tbody>
-      </table>
+          <h2>Histórico de Documentos</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>Nome do documento</th>
+                <th>Status</th>
+                <th>Data e hora</th>
+                <th>Chave/Carteira</th>
+                <th>Geolocalização</th>
+                <th>URL de acesso blockchain</th>
+              </tr>
+            </thead>
+            <tbody> 
+              <!-- Exemplo de documento finalizado -->
+              <tr>
+                <td>Contrato de trabalho</td>
+                <td>Finalizado</td>
+                <td>02/05/2024 13:44</td>
+                <td>C4b6db1a5a...</td>
+                <td>Avenida Paulista - 1499 - SP</td>
+                <td>4b8ae0d6f7...</td>
+              </tr> 
+              <!-- Exemplo de documento pendente -->
+              <tr>
+                <td>Contrato de locação</td>
+                <td>Pendente</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+                <td>-</td>
+              </tr> 
+              <!-- Exemplo de documento expirado -->
+              <tr>
+                <td>Contrato de Prestação de Serviço</td>
+                <td>Expirado</td>
+                <td>24/03/2024 10:13</td>
+                <td>D3ddb105cO...</td>
+                <td>Avenida 23 de Maio - 1105 - SP</td>
+                <td>Cbjr4ee9lomg6...</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </main> 
+      <!-- Temporizador agora está fora da main -->
+      <div class="timer-wrapper">
+        <div class="timer-container">
+          <div class="timer-ring"> <svg viewBox="0 0 100 100">
+              <circle class="bg" cx="50" cy="50" r="45"></circle>
+              <circle class="progress" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <div class="timer-text">
+              <p>Tempo até expirar</p> <span id="timer"></span>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    </main>
   </div>
+  <script src="./script.js"></script>
+  <footer>
+    <p>&copy; 2023 Letssign. Todos os direitos reservados.</p>
+</footer>
 </body>
+
 </html>
