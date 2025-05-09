@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> - LetsSign</title>
+    <link rel="stylesheet" href="css/assinatura2.css" />
+</head>
+
+<body>
+    <!-- Timer fixado como widget -->
+    <div class="timer-widget">
+        <div class="timer-ring">
+            <svg viewBox="0 0 100 100">
+                <circle class="bg" cx="50" cy="50" r="45"></circle>
+                <circle class="progress" cx="50" cy="50" r="45"></circle>
+            </svg>
+            <div class="timer-text">
+                <p>Tempo até expirar</p>
+                <span id="timer">10:00</span>
+            </div>
+        </div>
+    </div>
+<!--ispaço-->
+    <div class="container">
+        <aside class="sidebar">
+            <h1 class="logo">
+              <img src="images/LogoBranco.svg" alt="LetsSign Logo" class="logo-img">
+            </h1>
+            <div class="steps-container">
+              <nav class="steps">
+                <a href="/face_ID.html">mudar</a>
+                <a href="#verificacao-digital">mudar2</a>
+                <a href="#emissao-did" class="active">mudar4</a>
+                <a href="#cadastrar-assinatura">mudar3</a>
+              </nav>
+            </div>
+          </aside>
+          
+
+        <main class="main">
+           <!-- caixona -->
+            <div class="card">
+                <div class="titulo-box">
+                    <span class="titulo">Verificação</span>
+                </div>
+                
+                  
+                <p class="subtitulo">Para garantir sua segurança, por favor, siga as instruções para registrar sua identidade com algumas etapas.</p>
+
+                <div class="passo">
+                    <div class="centro">
+                        <h3 class="passo h3">Passo 4 - Cadastro da assinatura digital</h3>
+                      </div>
+                      
+                    <p>Assine o campo indicado da mesma forma que está no seu RG.</p>
+                </div>
+
+                <div class="assinatura-box">
+                    <canvas id="canvas"></canvas>
+                    <div class="botoes">
+                        <button id="limpar">Limpar</button>
+                        <button id="confirmar">Confirmar</button>
+                    </div>
+                </div>
+
+                <button class="iniciar">INICIAR VERIFICAÇÃO</button>
+            </div>
+        </main>
+    </div>
+
+    <script src="rodaveisASS.js"></script>
+</body>
+
+</html>
