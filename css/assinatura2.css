@@ -42,37 +42,46 @@ body {
 
 
 .steps {
-  position: relative;
-  padding-left: 20px;
-  border-left: 1px solid #00C2FF;
+    position: relative;
+    padding-left: 20px;
+    border-left: 1px solid #42caff;
 }
 
 .steps a {
-  position: relative;
-  display: block;
-  margin-bottom: 50px;
-  color: #00C2FF;
-  text-decoration: none;
-  transition: 0.1s ease;
+    position: relative;
+    display: block;
+    margin-bottom: 50px;
+    color: #42caff;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
 .steps a::before {
-  content: '';
-  position: absolute;
-  left: -30px;
-  top: 2px;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background-color: #00C2FF; 
-  border: 3px solid #00C2FF;
+    content: '';
+    position: absolute;
+    left: -30px;
+    top: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: #12181f;
+    border: 3px solid #42caff;
+    transition: background-color 0.3s;
 }
 
+.steps a:hover::before {
+    background-color: #42caff;
+}
 
 .steps a:hover {
-  font-weight: bold;
-  transform: translateX(5px);
+    font-weight: bold;
+    transform: translateX(5px);
 }
+
+.steps a.active::before {
+    background-color: #42caff;
+}
+
 
 .main {
   flex: 1;
