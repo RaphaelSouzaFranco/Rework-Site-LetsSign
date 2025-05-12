@@ -15,7 +15,7 @@ body {
 .container {
   display: flex;
   height: 100vh;
-  align-items: center; /* Isso alinha o conteúdo verticalmente */
+  align-items: center; 
 }
 
 
@@ -25,14 +25,21 @@ body {
   border-right: 1px solid #2b2f36;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Adicione isso */
-  align-items: center;         /* Centraliza horizontalmente */
+  justify-content: flex-start; 
+  align-items: center;         
 }
 
 .logo {
-  margin-bottom: 40px;         /* Espaço abaixo da logo */
-  align-self: center;          /* Centraliza a logo */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 50px;
 }
+
+.logo .check {
+    color: #42caff;
+    margin-left: 5px;
+}
+
 
 .steps {
   position: relative;
@@ -57,22 +64,14 @@ body {
   width: 14px;
   height: 14px;
   border-radius: 50%;
-  background-color: #12181f;
+  background-color: #00C2FF; 
   border: 3px solid #00C2FF;
-  transition: background-color 0.1s;
 }
 
-.steps a:hover::before {
-  background-color: #00C2FF;
-}
 
 .steps a:hover {
   font-weight: bold;
   transform: translateX(5px);
-}
-
-.steps a.active::before {
-  background-color: #00C2FF;
 }
 
 .main {
@@ -204,6 +203,9 @@ canvas {
 
 
 .iniciar {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
   width: 80%;
   padding: 15px;
   background-color: #00C2FF;
@@ -213,14 +215,15 @@ canvas {
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
-  align-items:  center;
-  right: 0px;
   margin-left: 3cm;
+  transition: background-color 0.2s, color 0.2s;
 }
-.iniciar:hover{
+
+.iniciar:hover {
   background-color: whitesmoke;
   color: black;
 }
+
 
 .timer-ring {
   position: relative;
