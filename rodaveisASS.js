@@ -70,34 +70,3 @@ document.getElementById('confirmar').addEventListener('click', () => {
     alert('Assinatura confirmada!');
 });
 
-// ==================== TIMER ====================
-let tempoRestante = 600;
-const timerTexto = document.getElementById('timer');
-const circuloProgresso = document.querySelector('circle.progress');
-const comprimentoCircunferencia = 2 * Math.PI * 45;
-
-function atualizarTimer() {
-    const minutos = Math.floor(tempoRestante / 60);
-    const segundos = tempoRestante % 60;
-
-    timerTexto.textContent = `${minutos.toString().padStart(2, '0')}:${segundos
-        .toString()
-        .padStart(2, '0')}`;
-
-    const progresso = tempoRestante / 600;
-    const dashOffset = comprimentoCircunferencia * (1 - progresso);
-    circuloProgresso.style.strokeDashoffset = dashOffset;
-
-    if (tempoRestante <= 0) {
-        clearInterval(intervalo);
-        timerTexto.textContent = "00:00";
-        window.location.href = "/pagina-expirada.html"; // Altere se necessário
-    }
-
-    tempoRestante--;
-}
-
-circuloProgresso.style.strokeDasharray = comprimentoCircunferencia;
-circuloProgresso.style.strokeDashoffset = 0;
-
-const intervalo = setInterval(atualizarTimer, 1000);
