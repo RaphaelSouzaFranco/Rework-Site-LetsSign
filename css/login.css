@@ -104,6 +104,9 @@ input {
 }
 
 .login-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
     background-color: #00C2FF;
     border: none;
     padding: 10px;
@@ -115,15 +118,14 @@ input {
     margin-bottom: 10px;
 }
 
-.login-btn:hover{
-
+.login-btn:hover {
     background-color: whitesmoke;
-
 }
 
-
-
 .register-btn {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
     background: none;
     border: 1px solid #fff;
     padding: 10px;
@@ -135,9 +137,9 @@ input {
 
 .register-btn:hover {
     background-color: whitesmoke;
-    color: #000
-    
+    color: #000;
 }
+
 
 .privacy-policy {
     display: block;
@@ -156,4 +158,54 @@ input {
     vertical-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+
+@media (max-width: 844px) {
+    .container {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .background-image {
+        width: 100%;
+        height: auto;
+        opacity: 0.2;
+    }
+
+    .login-box {
+        width: 90%;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .login-btn,
+    .register-btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .forgot-password {
+        text-align: center;
+    }
+}
+
+@media (min-width: 1600px) {
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .login-box {
+        padding: 40px;
+    }
+
+    .background-image {
+        width: 1000px;
+    }
 }

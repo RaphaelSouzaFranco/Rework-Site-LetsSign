@@ -231,7 +231,13 @@ circle.progress {
     }
 
     .steps a {
-        margin: 0;
+        margin: 5px 10px;
+        white-space: nowrap;
+        padding: 6px 10px;
+        border-radius: 6px;
+        background-color: rgba(66, 202,255, 0.1);
+        font-size: 14px;
+        flex-shrink: 0;
     }
 
     .content {
@@ -242,13 +248,27 @@ circle.progress {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        height: auto;
+        padding: 20px;
     }
 
     .photo-box img {
         margin-right: 0;
         margin-bottom: 20px;
+        width: 120px;
+        height:120px;
     }
 
+    .info{
+        width:100%;
+    }
+
+    .info p{
+        margin-bottom: 10px;
+        font-size: 14px;
+        line-height: 1.4;
+        word-wrap: break-word;
+    }
     .timer-container {
         width: 100%;
         margin-top: 20px; 
