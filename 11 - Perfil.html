@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LetsSign - Perfil</title>
+    <link rel="stylesheet" href="./css/Base.css" />
+    <link rel="stylesheet" href="./css/Perfil.css" />
+</head>
+
+<body>
+    <header> <img src="images/LogoBranco.svg" alt="LetsSign Logo" class="logo" /> </header>
+    <div class="container">
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#"><img src="images/Home.png"> Início</a></li>
+                    <li><a href="./08 - Documentos.html" target="_blank"><img src="images/Documentos.png"> Documentos</a></li>
+                    <li><a href="./10 - Historico.html" target="_blank"><img src="images/Histórico.png"> Histórico</a></li>
+                    <li><a href="11 - Perfil.html" class="active"><img src="images/Perfil.png"> Perfil</a></li>
+                    <li><a href="./01- login.html"><img src="images/Sair.png"> Sair</a></li>
+                </ul>
+            </nav>
+        </aside> <!-- Área principal horizontal -->
+        <div class="content-area">
+            <main class="main perfil-horizontal">
+                <div class="profile-header">
+                    <h2>Meu Perfil</h2>
+                    <div class="avatar-container"> <img src="./images/425a71ec-df58-4631-888c-7bdb3cd041c9.jpg" alt="Avatar"
+                            class="profile-avatar"> <button class="edit-avatar-btn">Alterar Foto</button> </div>
+                </div>
+                <div class="horizontal-form"> <!-- Primeira Coluna -->
+                    <div class="form-column">
+                        <div class="form-group"> <label for="name">Nome Completo</label>
+                            <div class="input-with-action"> <input type="text" id="name" value="Carlos Silva"> <button
+                                    class="edit-field-btn"><img src="images/botao editar.png" alt="Editar"></button> </div>
+                        </div>
+                        <div class="form-group"> <label for="email">E-mail</label> <input type="email" id="email"
+                                value="carlos.silva@email.com" disabled> </div>
+                        <div class="form-group"> <label for="cpf">CPF</label> <input type="text" id="cpf"
+                                value="123.456.789-00" disabled> </div>
+                    </div> <!-- Segunda Coluna -->
+                    <div class="form-column">
+                        <div class="form-group"> <label for="phone">Telefone</label>
+                            <div class="input-with-action"> <input type="tel" id="phone" value="(11) 98765-4321">
+                                <button class="edit-field-btn"><img src="images/botao editar.png" alt="Editar"></button>
+                            </div>
+                        </div>
+                        <div class="form-group"> <label for="birthdate">Data de Nascimento</label> <input type="date"
+                                id="birthdate" value="1985-05-15"> </div>
+                        <div class="form-group"> <label for="plan">Plano</label> <select id="plan">
+                                <option>Básico</option>
+                                <option selected>Premium</option>
+                                <option>Empresarial</option>
+                            </select> </div>
+                    </div> <!-- Terceira Coluna -->
+                    <div class="form-column">
+                        <div class="form-group"> <label>Assinaturas Realizadas</label>
+                            <div class="stat-box">24</div>
+                        </div>
+                        <div class="form-group"> <label>Membro Desde</label>
+                            <div class="stat-box">15/03/2022</div>
+                        </div>
+                        <div class="form-group"> <label>Status da Conta</label>
+                            <div class="status-badge active">Ativa</div>
+                        </div>
+                    </div>
+                </div> <!-- Seção de Senha -->
+                <div class="password-section">
+                    <h3>Alterar Senha</h3>
+                    <div class="password-fields">
+                        <div class="form-group"> <label for="current-password">Senha Atual</label> <input
+                                type="password" id="current-password"> </div>
+                        <div class="form-group"> <label for="new-password">Nova Senha</label> <input type="password"
+                                id="new-password"> </div>
+                        <div class="form-group"> <label for="confirm-password">Confirmar Senha</label> <input
+                                type="password" id="confirm-password"> </div> <button class="btn-save">Salvar
+                            Alterações</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+    <footer>
+        <p>&copy; 2023 Letssign. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
