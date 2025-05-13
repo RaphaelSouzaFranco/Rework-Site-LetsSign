@@ -1,7 +1,6 @@
 /* Reset CSS */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
-
 :root {
     --primary-color: #25DFFE;
     --secondary-color: #171E22;
@@ -44,10 +43,6 @@ main{
     height: auto ; /* mantém a proporção da imagem */
     margin: 0 auto; /* centraliza a imagem */
 }
-  
-.container {
-    
-}
 
 .camera-section {
     height: 350px;
@@ -70,11 +65,11 @@ main{
     flex-direction: column;
     gap: 20px; /* espaço entre os itens */
 }
-  
+
 .steps {
     position: relative;
     padding-left: 20px;
-    border-left: 1px solid var(--primary-color);
+    border-left: 2px solid var(--primary-color);
 }
 
 .steps a {
@@ -135,6 +130,15 @@ main{
     object-fit: cover; /* preenche o quadro sem distorcer */
     
 }
+
+.sidebar {
+    width: 220px;
+    padding: 30px 20px;
+    border-right: 1px solid #2b2f36;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
   
 .scan-feedback {
     position: relative;
@@ -151,7 +155,7 @@ main{
     100% { top: 100%; }
 }
   
-.btn {
+.btn-primary {
     background-color: var(--primary-color);
     border: none;
     padding: 12px 24px; 
@@ -164,11 +168,14 @@ main{
     max-width: 250px;
     transition: background-color 0.3s;
     margin-top: 20px;
-    
-}    
+    text-align: center;
+    text-decoration: none; /* remover sublinhado */
+    display: inline-block; /* garante que padding e width funcionem como botão */
+}
 
-.btn:hover {
-  background-color: whitesmoke;
+.btn-primary:hover {
+    background-color: whitesmoke;
+    color: #171E22;
 }
 
 .instructions-section {
