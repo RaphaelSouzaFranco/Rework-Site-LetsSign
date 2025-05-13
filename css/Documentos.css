@@ -24,14 +24,14 @@
 }
 
 .thumbnail-container {
-    height: 120px; /* Altura fixa de 150 pixels */
-    margin: 5px; /* Espaço de 10px abaixo do contêiner (para separar de outros elementos) */
-    display: flex; /* Torna o contêiner um flexbox para alinhar itens filhos */
-    align-items: center; /* Alinha verticalmente os itens filhos ao centro */
-    justify-content: center; /* Alinha horizontalmente os itens filhos ao centro */
-    overflow: hidden; /* Esconde qualquer conteúdo que ultrapasse os limites do contêiner */
-    border-radius: 8px; /* Arredonda os cantos com raio de 8px */
-    background-color: #f5f5f5; /* Define uma cor de fundo cinza claro */
+    height: 120px; 
+    margin: 5px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    overflow: hidden; 
+    border-radius: 8px; 
+    background-color: #f5f5f5; 
   }
 
 .document-thumbnail {

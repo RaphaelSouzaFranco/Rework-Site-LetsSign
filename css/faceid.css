@@ -5,7 +5,7 @@
     --primary-color: #25DFFE;
     --secondary-color: #171E22;
     --text-color: rgba(37, 223, 254, 0.5);
-    --background-color: #2b2f36;
+    --background-color: #12181f;
   }
 
 * {
@@ -13,7 +13,7 @@
 }
 
 body {
-    background-color: #171E22;
+    background-color: #12181f;
     font-family: 'Segoe UI', sans-serif;
     display: flex;
     margin: 0;
@@ -39,17 +39,17 @@ main{
 }
   
 .logo img {
-    max-width: 300px; /* ajuste conforme necessário */
-    height: auto ; /* mantém a proporção da imagem */
-    margin: 0 auto; /* centraliza a imagem */
+    max-width: 300px; 
+    height: auto ; 
+    margin: 0 auto; 
 }
 
 .camera-section {
     height: 350px;
     flex-direction: column;
     display: flex;
-    align-items: center;     /* centraliza verticalmente */
-    margin: auto 0;    /* necessário para o posicionamento absoluto do conteúdo */
+    align-items: center;     
+    margin: auto 0;    
 }
 
 .id_rosto, .face-frame {
@@ -58,18 +58,19 @@ main{
 }
 
 
-/* ajuste da lista de etapas à esquerda */
+
 .content {
     padding: 50px;
     display: flex;
     flex-direction: column;
-    gap: 20px; /* espaço entre os itens */
+    gap: 20px; 
 }
 
 .steps {
     position: relative;
     padding-left: 20px;
     border-left: 2px solid var(--primary-color);
+    height: 23
 }
 
 .steps a {
@@ -108,11 +109,11 @@ main{
 }
   
 
-/* informações à direita */
+
 .container-form {
-    width: 400px; /* largura fixa */
-    margin-left: auto; /* empurra para a direita */
-    margin-right: 50px; /* distancia da borda direita */
+    width: 400px; 
+    margin-left: auto; 
+    margin-right: 50px; 
     padding: 20px; 
 }
 
@@ -127,7 +128,7 @@ main{
 #cameraFeed {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* preenche o quadro sem distorcer */
+    object-fit: cover; 
     
 }
 
@@ -163,14 +164,14 @@ main{
     color: #171E22;
     cursor: pointer;
     border-radius: 15px;
-    font-weight: 400;
+    font-weight: bold;
     width: 100%;
     max-width: 250px;
     transition: background-color 0.3s;
     margin-top: 20px;
     text-align: center;
-    text-decoration: none; /* remover sublinhado */
-    display: inline-block; /* garante que padding e width funcionem como botão */
+    text-decoration: none; 
+    display: inline-block; 
 }
 
 .btn-primary:hover {
@@ -181,7 +182,7 @@ main{
 .instructions-section {
     width: 28%;
     font-size: 14px;
-    color: rgba(37, 223, 254, 0.5); /* 50% de opacidade */
+    color: rgba(37, 223, 254, 0.5); 
     text-align: center;
 }
 

@@ -1,13 +1,13 @@
-const TOTAL_TIME = 30 * 60; // em segundos
+const TOTAL_TIME = 30 * 60; 
 const timerDisplay = document.getElementById('timer');
 const progressCircle = document.querySelector('circle.progress');
 const totalLength = 2 * Math.PI * 45;
 
-// Seta o stroke do círculo
+
 progressCircle.style.strokeDasharray = totalLength;
 progressCircle.style.strokeDashoffset = 0;
 
-// Define ou obtém a hora final do timer
+
 if (!localStorage.getItem("endTime")) {
     const endTime = Date.now() + TOTAL_TIME * 1000;
     localStorage.setItem("endTime", endTime);
@@ -31,7 +31,7 @@ function updateTimer() {
         setTimeout(updateTimer, 1000);
     } else {
         timerDisplay.textContent = '00:00';
-        localStorage.removeItem("endTime"); // limpa para um novo ciclo se quiser
+        localStorage.removeItem("endTime"); 
     }
 }
 
