@@ -25,6 +25,13 @@ body {
     align-items: flex-start;
 }
 
+.logo-img.sidebar-logo {
+    height: 45px;
+    width: auto;
+    align-items: center;
+}
+
+
 .logo {
     font-size: 24px;
     font-weight: bold;
