@@ -11,10 +11,10 @@
     <div class="container-">
         <aside class="sidebar-">
             <nav class="steps">
-                <a href="face_ID.html">Verificação Facial</a>
-                <a href="#validacao-senha" class="active">Validação de Senha</a>
-                <a href="#emissao-did">Emissão do DID</a>
-                <a href="#cadastrar-assinatura">Cadastrar assinatura</a>
+                <a href="./04 - faceid.html">Verificação Facial</a>
+                <a href="./05 - validacao_senha.html" class="active">Validação de Senha</a>
+                <a href="./06 - DID.html">Emissão do DID</a>
+                <a href="./07 - assinaturaveri.html">Cadastrar assinatura</a>
             </nav>
         </aside>
         <div class="right-validar">
@@ -22,19 +22,19 @@
                 <h1>Validação de senha</h1>
                 <h3>Para garantir sua segurança, informe sua senha e confirme-a.</h3>
 
-                <div class="form-group">
+                <form action="./06 - DID.html" method="GET" class="form-group">
                     <div class="texfield">
                         <label for="senha">Senha:</label>
-                        <input type="password" name="senha" placeholder="Digite sua senha">
+                        <input type="password" name="senha" placeholder="Digite sua senha" required>
                     </div>
 
                     <div class="texfield">
                         <label for="confirmar">Confirmar Senha:</label>
-                        <input type="password" name="confirmar" placeholder="Digite a senha novamente">
+                        <input type="password" name="confirmar" placeholder="Digite a senha novamente" required>
                     </div>
 
-                    <button class="btn-validacao">INICIAR VALIDAÇÃO</button>
-                </div>
+                    <button type="submit" class="btn-validacao">INICIAR VALIDAÇÃO</button>
+                </form>
             </div>
         </div>
 </body>
