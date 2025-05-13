@@ -40,12 +40,13 @@ body {
     position: relative;
     padding-left: 20px;
     border-left: 1px solid #42caff;
+    height:30%
 }
 
 .steps a {
     position: relative;
     display: block;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
     color: #42caff;
     text-decoration: none;
     transition: 0.3s ease;
