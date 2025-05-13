@@ -18,7 +18,6 @@ body {
   align-items: center; 
 }
 
-
 .sidebar {
   width: 220px;
   padding: 190px 20px;
@@ -30,58 +29,57 @@ body {
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 50px;
 }
 
 .logo .check {
-    color: #42caff;
-    margin-left: 5px;
+  color: #42caff;
+  margin-left: 5px;
 }
 
-
 .steps {
-    position: relative;
-    padding-left: 20px;
-    border-left: 1px solid #42caff;
+  position: relative;
+  padding-left: 20px;
+  border-left: 1px solid #42caff;
 }
 
 .steps a {
-    position: relative;
-    display: block;
-    margin-bottom: 50px;
-    color: #42caff;
-    text-decoration: none;
-    transition: 0.3s ease;
+  position: relative;
+  display: block;
+  margin-bottom: 50px;
+  color: #42caff;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
 .steps a::before {
-    content: '';
-    position: absolute;
-    left: -30px;
-    top: 2px;
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    background-color: #12181f;
-    border: 3px solid #42caff;
-    transition: background-color 0.3s;
-}
-
-.steps a:hover::before {
-    background-color: #42caff;
-}
-
-.steps a:hover {
-    font-weight: bold;
-    transform: translateX(5px);
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #12181f; 
+  border: 3px solid #42caff;
+  transition: background-color 0.3s;
 }
 
 .steps a.active::before {
-    background-color: #42caff;
+  background-color: #42caff;
 }
 
+
+.steps a:hover::before {
+  background-color: #42caff;
+}
+
+.steps a:hover {
+  font-weight: bold;
+  transform: translateX(5px);
+}
 
 .main {
   flex: 1;
@@ -101,7 +99,6 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 95vh;
-
 }
 
 .titulo-box {
@@ -121,8 +118,6 @@ body {
   border-radius: 4px;
 }
 
-  
-
 .subtitulo {
   font-size: 15px;
   color: whitesmoke;
@@ -136,17 +131,17 @@ body {
 }
 
 .passo h3 {
-    display: inline-block;
-    border: 3px solid #00C2FF;
-    color: #00C2FF;
-    background-color: transparent;
-    padding: 8px 40px;
-    font-size: 18px;
-    font-weight: 600;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    text-align: center;
-  }
+  display: inline-block;
+  border: 3px solid #00C2FF;
+  color: #00C2FF;
+  background-color: transparent;
+  padding: 8px 40px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
 .passo p {
   color: whitesmoke;
@@ -157,8 +152,8 @@ body {
 .assinatura-box {
   background-color: #161B22;
   padding: 5px;
-  border-radius: 5px;
-  margin:20px;
+  border-radius: 8px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -167,24 +162,10 @@ body {
 canvas {
   background: whitesmoke;
   border: 1px solid #333;
-  border-radius: 4px;
-    width: 1120px;
-    height: 300px;
+  border-radius: 8px;
+  width: 100%;
+  height: 300px;
   display: block;
-}
-
-
-.botoes {
-  margin-top: 10px;
-  display: flex;
-  gap: 10px;
-}
-
-.botoes button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
 }
 
 .botoes {
@@ -192,14 +173,16 @@ canvas {
   display: flex;
   justify-content: space-between; 
   width: 100%;
+  gap: 10px;
 }
 
-#limpar, #confirmar {
+#limpar,
+#confirmar {
   background-color: #00C2FF;
   color: #161B22;
   padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
 }
@@ -209,7 +192,6 @@ canvas {
   background-color: whitesmoke;
   color: black;
 }
-
 
 .iniciar {
   display: inline-block;
@@ -221,7 +203,7 @@ canvas {
   color: #000;
   font-weight: bold;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
   margin-left: 3cm;
@@ -233,11 +215,19 @@ canvas {
   color: black;
 }
 
+.timer-widget {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 999;
+  width: 160px;
+  height: 160px;
+}
 
 .timer-ring {
   position: relative;
-  width: 160px;
-  height: 160px;
+  width: 100%;
+  height: 100%;
 }
 
 .timer-ring svg {
@@ -258,11 +248,10 @@ circle.bg {
 
 circle.progress {
   stroke: whitesmoke;
-  stroke-dasharray: 282.6;       /* comprimento da circunferência */
-  stroke-dashoffset: 0;          /* vai animar a partir daqui */
+  stroke-dasharray: 282.6;
+  stroke-dashoffset: 0;
   transition: stroke-dashoffset 1s linear;
 }
-
 
 .timer-text {
   position: absolute;
@@ -277,11 +266,19 @@ circle.progress {
   font-weight: bold;
 }
 
-.timer-widget {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 999;
+@media (max-width: 1024px) {
+  .timer-widget {
+    position: relative;
+    margin: 0 auto 20px;
+    top: 0;
+    right: 0;
+    width: 120px;
+    height: 120px;
+  }
+
+  .timer-text span {
+    font-size: 20px;
+  }
 }
 
 @media (max-width: 844px) {
@@ -290,13 +287,13 @@ circle.progress {
   }
 
   .sidebar {
-    width: 220px;
+    width: 100%;
     padding: 40px 20px;
-    border-right: 1px solid #2b2f36;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Adicione isso */
-    align-items: center;         /* Centraliza horizontalmente */
+    border-right: none;
+    border-bottom: 1px solid #2b2f36;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .steps {
@@ -304,33 +301,31 @@ circle.progress {
     border-left: 1px solid #00C2FF;
     display: flex;
     flex-direction: column;
-    gap: 50px;
-  }
-  
-  .logo {
-    align-items: top;
-    margin-top: 200px;
-  }
-  
-    
-  
-  .main {
-    padding: 10px;
+    gap: 30px;
   }
 
-  .timer-widget {
-    position: relative;
-    width: 100%;
-    max-width: 300px;
-    top: 30px;
-    margin: auto;
+  .logo {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .main {
+    padding: 10px;
   }
 }
 
 @media (max-width: 430px) {
   .timer-widget {
-    top: 30px;
-    width: 90%;
-    max-width: 250px;
+    width: 100px;
+    height: 100px;
+  }
+
+  .timer-text span {
+    font-size: 18px;
+  }
+
+  .titulo {
+    padding: 8px 50px;
+    font-size: 16px;
   }
 }
