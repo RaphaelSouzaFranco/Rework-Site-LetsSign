@@ -72,7 +72,7 @@
     color: white;
     border: 2px solid #fff;
     font-size: 1rem;
-    border-radius: 6px;
+    border-radius: 8px;
   }
   
   .campo-confirmacao input:focus {
@@ -90,7 +90,7 @@
     padding: 8px 12px;
     background-color: transparent;
     border: 2px solid white;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: background-color 0.1s ease;
   }
 
@@ -107,7 +107,7 @@
     color: black;
     text-decoration: none;
     padding: 16px; 
-    border-radius: 6px;
+    border-radius: 8px;
     font-weight: bold;
     transition: background-color 0.1s ease;
     margin-top: 20px;

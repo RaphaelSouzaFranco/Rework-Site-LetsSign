@@ -143,7 +143,7 @@ body {
     padding: 8px 40px;
     font-size: 18px;
     font-weight: 600;
-    border-radius: 4px;
+    border-radius: 8px;
     margin-bottom: 20px;
     text-align: center;
   }
@@ -157,7 +157,7 @@ body {
 .assinatura-box {
   background-color: #161B22;
   padding: 5px;
-  border-radius: 5px;
+  border-radius: 8px;
   margin:20px;
   display: flex;
   flex-direction: column;
@@ -167,7 +167,7 @@ body {
 canvas {
   background: whitesmoke;
   border: 1px solid #333;
-  border-radius: 4px;
+  border-radius: 8px;
     width: 1120px;
     height: 300px;
   display: block;
@@ -183,7 +183,7 @@ canvas {
 .botoes button {
   padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
 }
 
@@ -199,7 +199,7 @@ canvas {
   color: #161B22;
   padding: 10px 15px;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   font-weight: bold;
 }
@@ -221,7 +221,7 @@ canvas {
   color: #000;
   font-weight: bold;
   border: none;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
   font-size: 16px;
   margin-left: 3cm;
@@ -258,8 +258,8 @@ circle.bg {
 
 circle.progress {
   stroke: whitesmoke;
-  stroke-dasharray: 282.6;       /* comprimento da circunferência */
-  stroke-dashoffset: 0;          /* vai animar a partir daqui */
+  stroke-dasharray: 282.6;      
+  stroke-dashoffset: 0;         
   transition: stroke-dashoffset 1s linear;
 }
 
@@ -295,8 +295,8 @@ circle.progress {
     border-right: 1px solid #2b2f36;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Adicione isso */
-    align-items: center;         /* Centraliza horizontalmente */
+    justify-content: flex-start; 
+    align-items: center;        
   }
 
   .steps {
